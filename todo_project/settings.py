@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEYは、Djangoがセキュアな処理をするために使う秘密鍵だよ。
 # 絶対に漏洩させちゃダメ！
 # Reactでいうと、APIキーみたいなものだけど、もっと重要なもの。
-SECRET_KEY = 'django-insecure-k(mvp$8#$ik4gu6&*i4m%wy84z$(08!ey^@@r30_2e7^5qa4tr'
+SECRET_KEY = "django-insecure-k(mvp$8#$ik4gu6&*i4m%wy84z$(08!ey^@@r30_2e7^5qa4tr"
 
 # DEBUGは、開発モードかどうかを設定するフラグだよ。
 # Trueだと、エラーメッセージが詳しく表示されるけど、本番環境ではFalseにする必要があるよ。
@@ -42,47 +42,47 @@ ALLOWED_HOSTS = []
 # アプリケーションの設定だよ。
 # Reactでいうと、package.jsonのdependenciesみたいな感じ。
 INSTALLED_APPS = [
-    'django.contrib.admin', # Djangoの管理サイト
-    'django.contrib.auth', # 認証機能
-    'django.contrib.contenttypes', # コンテンツタイプ
-    'django.contrib.sessions', # セッション機能
-    'django.contrib.messages', # メッセージ機能
-    'django.contrib.staticfiles', # 静的ファイル機能
-    'rest_framework', # Django REST Framework
-    'todo', # todoアプリ
+    "django.contrib.admin",  # Djangoの管理サイト
+    "django.contrib.auth",  # 認証機能
+    "django.contrib.contenttypes",  # コンテンツタイプ
+    "django.contrib.sessions",  # セッション機能
+    "django.contrib.messages",  # メッセージ機能
+    "django.contrib.staticfiles",  # 静的ファイル機能
+    "rest_framework",  # Django REST Framework
+    "todo",  # todoアプリ
 ]
 
 # ミドルウェアの設定だよ。
 # リクエストとレスポンスを処理する際に、色々な処理を挟むためのもの。
 # Reactでいうと、Reduxのmiddlewareみたいな感じ。
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware', # セキュリティ関連のミドルウェア
-    'django.contrib.sessions.middleware.SessionMiddleware', # セッション管理
-    'django.middleware.common.CommonMiddleware', # 共通処理
-    'django.middleware.csrf.CsrfViewMiddleware', # CSRF対策
-    'django.contrib.auth.middleware.AuthenticationMiddleware', # 認証処理
-    'django.contrib.messages.middleware.MessageMiddleware', # メッセージ処理
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', # クリックジャッキング対策
+    "django.middleware.security.SecurityMiddleware",  # セキュリティ関連のミドルウェア
+    "django.contrib.sessions.middleware.SessionMiddleware",  # セッション管理
+    "django.middleware.common.CommonMiddleware",  # 共通処理
+    "django.middleware.csrf.CsrfViewMiddleware",  # CSRF対策
+    "django.contrib.auth.middleware.AuthenticationMiddleware",  # 認証処理
+    "django.contrib.messages.middleware.MessageMiddleware",  # メッセージ処理
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",  # クリックジャッキング対策
 ]
 
 # ルートURLの設定だよ。
 # Reactでいうと、ルーティングの設定ファイルみたいなもの。
-ROOT_URLCONF = 'todo_project.urls'
+ROOT_URLCONF = "todo_project.urls"
 
 # テンプレートの設定だよ。
 # HTMLファイルをレンダリングするための設定。
 # Reactでいうと、JSXをレンダリングする設定みたいなもの。
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
@@ -91,16 +91,16 @@ TEMPLATES = [
 # WSGIの設定だよ。
 # DjangoアプリをWebサーバーで動かすための設定。
 # Reactでいうと、npm run buildした後のファイルをサーバーで動かす設定みたいなもの。
-WSGI_APPLICATION = 'todo_project.wsgi.application'
+WSGI_APPLICATION = "todo_project.wsgi.application"
 
 
 # データベースの設定だよ。
 # どのデータベースを使うか、データベースの名前などを設定する。
 # Reactでいうと、APIのエンドポイントを設定するみたいなもの。
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # SQLiteを使う
-        'NAME': BASE_DIR / 'db.sqlite3', # データベースのファイルパス
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",  # SQLiteを使う
+        "NAME": BASE_DIR / "db.sqlite3",  # データベースのファイルパス
     }
 }
 
@@ -110,16 +110,16 @@ DATABASES = {
 # Reactでいうと、フォームのバリデーション設定みたいなもの。
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -127,9 +127,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # 国際化の設定だよ。
 # 言語やタイムゾーンを設定する。
 # Reactでいうと、i18nの設定みたいなもの。
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -139,8 +139,8 @@ USE_TZ = True
 # 静的ファイルの設定だよ。
 # CSSやJavaScriptなどの静的ファイルを配信するための設定。
 # Reactでいうと、publicディレクトリみたいなもの。
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
 # デフォルトのプライマリーキーの型を設定する。
 # 特に理由がなければ、このままでOK。
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Todo(models.Model):
     # id は自動的に作成される主キーですが、明示的に定義することも可能です。
     # 明示的に定義しない場合は、Djangoが自動的にAutoField（自動インクリメントする整数）を作成します。

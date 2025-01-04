@@ -15,7 +15,7 @@ from django.core.wsgi import get_wsgi_application
 
 # 環境変数 'DJANGO_SETTINGS_MODULE' に、Djangoの設定ファイル（settings.py）の場所を設定しているよ。
 # Reactでいうと、環境変数にAPIのエンドポイントを設定するみたいな感じ。
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'todo_project.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "todo_project.settings")
 
 # DjangoアプリのWSGIアプリケーションを取得しているよ。
 # これが、WebサーバーからのリクエストをDjangoアプリに渡すための入り口になるんだ。

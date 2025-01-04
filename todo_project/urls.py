@@ -18,9 +18,9 @@ urlpatterns = [
     # /admin/ というURLにアクセスすると、Djangoの管理サイトが表示されるよ。
     # これはDjangoが自動で用意してくれている便利な機能。
     # Reactでいうと、管理画面用のコンポーネントみたいなもの。
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     # /api/ というURLにアクセスすると、todoアプリのurls.pyに処理が移るよ。
     # include()は、他のurls.pyファイルの内容をこのファイルに含めるためのもの。
     # Reactでいうと、ルーティングの設定を別のファイルに分割して、それをimportするみたいな感じ。
-    path('api/', include('todo.urls')),
+    path("api/", include("todo.urls")),
 ]

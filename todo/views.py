@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from .models import Todo
-from .serializers import TodoSerializer
+from todo.models import Todo
+from todo.serializers import TodoSerializer
+
 
 # ModelViewSetは、Django REST Frameworkが提供する便利なクラスで、
 # CRUD（作成、読み取り、更新、削除）の処理をまとめてやってくれるんだ。

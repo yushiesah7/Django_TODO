@@ -22,7 +22,7 @@ from django.core.asgi import get_asgi_application
 # 環境変数DJANGO_SETTINGS_MODULEを設定している。
 # これで、Djangoがどの設定ファイルを使うか教えている。
 # Reactでいうと、環境変数を使って、開発環境と本番環境で設定を切り替えるみたいなもんだ。
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'todo_project.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "todo_project.settings")
 
 # DjangoのASGIアプリケーションを取得している。
 # これが、Webサーバーからのリクエストを処理するメインの処理になる。
