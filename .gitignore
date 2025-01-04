@@ -1,0 +1,16 @@
+# Pythonのバイナリファイル
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 仮想環境
+venv/
+
+# Django関連
+*.sqlite3
+*.log
+*.swp
+*.swo
+/media
+/static
