@@ -1,34 +1,59 @@
 {
-    // pytest を使ってテストを実行する設定だよ！
-    // React でいうと、Jest とか Testing Library を使ってテストを書くのに近いかな。
+    // pytestを有効にする設定。Reactでいうと、Jestとかのテストフレームワークを有効にする感じ。
     "python.testing.pytestEnabled": true,
-    // unittest は使わない設定だよ。
-    // React でいうと、Jest の代わりに Mocha を使わないみたいな感じ。
+    // unittest, nosetestは無効にする設定。pytestだけ使う。
     "python.testing.unittestEnabled": false,
-    // nosetest も使わない設定だよ。
-    // これは、Jest とか Mocha 以外の別のテストフレームワークを使わないってこと。
     "python.testing.nosetestEnabled": false,
-    // pytest を実行する時に、どのディレクトリをテスト対象にするかを設定するよ。
-    // ここでは、"todo" ディレクトリを指定している。
-    // React でいうと、`src/components` ディレクトリとか、テストコードがあるディレクトリを指定する感じ。
+    // pytestの実行時に、`todo`ディレクトリをテスト対象にする設定。
+    // Reactでいうと、`jest todo`みたいな感じで、テスト対象のディレクトリを指定する感じ。
     "python.testing.pytestArgs": [
         "todo"
     ],
-    // コードを書くときに、自動で import 文を補完してくれる機能を使う設定だよ。
-    // React でいうと、VSCode の Auto Import 機能とか、ESLint の import/no-unresolved ルールみたいなもの。
-    "python.analysis.autoImportCompletions": true,
-    // 型チェックを strict モードで実行する設定だよ。
-    // React でいうと、TypeScript の strict モードをオンにする感じ。
-    // これをオンにすると、型エラーを厳密にチェックしてくれるから、バグを減らすのに役立つんだ。
-    "python.analysis.typeCheckingMode": "strict",
-    // テストを実行する時のカレントディレクトリを設定するよ。
-    // `${workspaceFolder}` は、VSCode で開いているプロジェクトのルートディレクトリのこと。
-    // React でいうと、`package.json` があるディレクトリみたいな感じ。
+    // テスト実行時のカレントディレクトリをワークスペースのルートにする設定。
+    // Reactでいうと、package.jsonがある場所を基準にするみたいな感じ。
     "python.testing.cwd": "${workspaceFolder}",
-    // 環境変数を設定するファイルへのパスを設定するよ。
-    // React でいうと、`.env` ファイルとかで API キーとかを設定するのに近いかな。
+    // 環境変数を`.env`ファイルから読み込む設定。
+    // Reactでいうと、`.env`ファイルにAPIキーとか環境変数を書いて、それを読み込む感じ。
     "python.envFile": "${workspaceFolder}/.env",
-    // Python の言語サーバーとして Pylance を使う設定だよ。
-    // React でいうと、ESLint とか Prettier みたいな、コードの補完とかエラーチェックをしてくれるツールみたいなもの。
-    "python.languageServer": "Pylance"
+    // Pythonの言語サーバーをPylanceにする設定。
+    // Reactでいうと、VSCodeの拡張機能で、コード補完とかエラーチェックとかをやってくれるやつ。
+    "python.languageServer": "Pylance",
+    // import文の自動補完を有効にする設定。
+    // Reactでいうと、`import { useState } from 'react'`とかを自動で補完してくれる感じ。
+    "python.analysis.autoImportCompletions": true,
+    // 型チェックを基本的なレベルで有効にする設定。
+    // Reactでいうと、TypeScriptの型チェックを有効にする感じ。
+    "python.analysis.typeCheckingMode": "basic",
+    // Pythonのコードを解析する際に、ワークスペースのルートをパスに追加する設定。
+    // これで、`todo_project`とかをimportできるようになる。
+    // Reactでいうと、`import { Component } from 'components/Component'`みたいな感じで、
+    // 相対パスでimportできるようにする感じ。
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    // lintを有効にする設定。
+    // Reactでいうと、ESLintとかPrettierとかでコードの品質をチェックする感じ。
+    "python.linting.enabled": true,
+    // mypyを有効にする設定。
+    // Reactでいうと、TypeScriptの型チェックを厳密にする感じ。
+    "python.linting.mypyEnabled": true,
+    // pylintを有効にする設定。
+    // Reactでいうと、ESLintみたいな感じで、コードの品質をチェックするツール。
+    "python.linting.pylintEnabled": true,
+    // pylintの設定で、相対importに関するエラーを無効にする設定。
+    // Reactでいうと、ESLintで特定のルールを無効にする感じ。
+    "python.linting.pylintArgs": [
+        "--disable=relative-beyond-top-level"
+    ],
+    // flake8を有効にする設定。
+    // Reactでいうと、ESLintみたいな感じで、コードの品質をチェックするツール。
+    "python.linting.flake8Enabled": true,
+    // flake8の設定で、`.flake8`ファイルを読み込む設定。
+    // Reactでいうと、ESLintの設定ファイル(`.eslintrc.js`)を読み込む感じ。
+    "python.linting.flake8Args": [
+        "--config=${workspaceFolder}/.flake8"
+    ],
+    // ruffは無効にする設定。
+    // Reactでいうと、ESLintとかPrettierとかの代わりに使うツールだけど、今回は使わない。
+    "python.linting.ruffEnabled": false
 }

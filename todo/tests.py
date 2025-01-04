@@ -1,8 +1,7 @@
 import pytest
 from rest_framework.test import APIClient
 from rest_framework import status
-from .models import Todo
-# from todo.models import Todo
+from todo.models import Todo
 from django.db import models
 
 @pytest.fixture

@@ -1,16 +1,32 @@
 # Pythonのバイナリファイル
+# __pycache__ は、Pythonがコンパイルしたコードを一時的に保存する場所だよ。
+# Reactでいうと、ビルドした後のdistフォルダみたいなものかな。
 __pycache__/
+# *.pyc, *.pyo, *.pyd は、Pythonのコンパイル済みファイルだよ。
+# Reactでいうと、webpackとかで変換された後のjsファイルみたいなもの。
 *.pyc
 *.pyo
 *.pyd
 
 # 仮想環境
+# venv/ は、Pythonの仮想環境が作られる場所だよ。
+# Reactでいうと、node_modulesみたいなもので、プロジェクトごとに必要なライブラリを管理するのに使うんだ。
 venv/
 
 # Django関連
+# *.sqlite3 は、Djangoが使うデータベースファイルだよ。
+# Reactでいうと、ローカルストレージとかに保存されるデータみたいなものかな。
 *.sqlite3
+# *.log は、Djangoのログファイルだよ。
+# Reactでいうと、console.logとかで出力したログをファイルに保存したものみたいな感じ。
 *.log
+# *.swp, *.swo は、Vimとかのテキストエディタが作る一時ファイルだよ。
+# Reactでいうと、特に対応するものはないかな。
 *.swp
 *.swo
+# /media は、Djangoでアップロードされたファイルが保存される場所だよ。
+# Reactでいうと、ユーザーがアップロードした画像とかを保存するフォルダみたいなもの。
 /media
+# /static は、Djangoで静的ファイル（CSS, JavaScript, 画像など）が保存される場所だよ。
+# Reactでいうと、publicフォルダとか、ビルド後のdistフォルダの中の静的ファイルみたいなもの。
 /static

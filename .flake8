@@ -1,0 +1,20 @@
+    [flake8]
+    # 一行の最大文字数を120に設定。
+    # Reactでいうと、Prettierとかでコードの長さを調整するのに近い。
+    max-line-length = 120
+    # 無視するエラーコードを設定。
+    # E203とW503は、Pythonのコーディングスタイルに関するエラーで、
+    # 今回は無視するように設定している。
+    # Reactでいうと、ESLintで特定のルールを無効にするのに近い。
+    ignore = E203, W503, E501
+    # 絶対importを許可するパッケージを設定。
+    # ここでは、`todo_project`というパッケージを絶対importで使えるようにしている。
+    # Reactでいうと、`import { Component } from 'react'`みたいな感じで、
+    # パッケージ名を直接指定してimportするのを許可する設定。
+    absolute-import-packages = todo_project
+    # 行末の空白を無視する設定
+    # Reactでいうと、Prettierとかで自動で削除されるようなもの
+    # ignore = W291, W293
+    # インデントに関するエラーを無視する設定
+    # Reactでいうと、Prettierとかで自動で修正されるようなもの
+    # ignore = E111, E114, E115, E116
