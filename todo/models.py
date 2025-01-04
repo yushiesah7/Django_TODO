@@ -1,6 +1,10 @@
 from django.db import models
 
 class Todo(models.Model):
+    # id は自動的に作成される主キーですが、明示的に定義することも可能です。
+    # 明示的に定義しない場合は、Djangoが自動的にAutoField（自動インクリメントする整数）を作成します。
+    # 今回は明示的に定義してみます。
+    id = models.AutoField(primary_key=True)
     # title はタスクの名前。CharField は文字列を保存するフィールドで、max_length は最大文字数。
     title = models.CharField(max_length=200)
     # completed はタスクが完了したかどうかを示すフラグ。BooleanField は True か False を保存するフィールドで、default=False は初期値を False に設定。

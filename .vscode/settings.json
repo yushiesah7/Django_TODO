@@ -1,0 +1,34 @@
+{
+    // pytest を使ってテストを実行する設定だよ！
+    // React でいうと、Jest とか Testing Library を使ってテストを書くのに近いかな。
+    "python.testing.pytestEnabled": true,
+    // unittest は使わない設定だよ。
+    // React でいうと、Jest の代わりに Mocha を使わないみたいな感じ。
+    "python.testing.unittestEnabled": false,
+    // nosetest も使わない設定だよ。
+    // これは、Jest とか Mocha 以外の別のテストフレームワークを使わないってこと。
+    "python.testing.nosetestEnabled": false,
+    // pytest を実行する時に、どのディレクトリをテスト対象にするかを設定するよ。
+    // ここでは、"todo" ディレクトリを指定している。
+    // React でいうと、`src/components` ディレクトリとか、テストコードがあるディレクトリを指定する感じ。
+    "python.testing.pytestArgs": [
+        "todo"
+    ],
+    // コードを書くときに、自動で import 文を補完してくれる機能を使う設定だよ。
+    // React でいうと、VSCode の Auto Import 機能とか、ESLint の import/no-unresolved ルールみたいなもの。
+    "python.analysis.autoImportCompletions": true,
+    // 型チェックを strict モードで実行する設定だよ。
+    // React でいうと、TypeScript の strict モードをオンにする感じ。
+    // これをオンにすると、型エラーを厳密にチェックしてくれるから、バグを減らすのに役立つんだ。
+    "python.analysis.typeCheckingMode": "strict",
+    // テストを実行する時のカレントディレクトリを設定するよ。
+    // `${workspaceFolder}` は、VSCode で開いているプロジェクトのルートディレクトリのこと。
+    // React でいうと、`package.json` があるディレクトリみたいな感じ。
+    "python.testing.cwd": "${workspaceFolder}",
+    // 環境変数を設定するファイルへのパスを設定するよ。
+    // React でいうと、`.env` ファイルとかで API キーとかを設定するのに近いかな。
+    "python.envFile": "${workspaceFolder}/.env",
+    // Python の言語サーバーとして Pylance を使う設定だよ。
+    // React でいうと、ESLint とか Prettier みたいな、コードの補完とかエラーチェックをしてくれるツールみたいなもの。
+    "python.languageServer": "Pylance"
+}
