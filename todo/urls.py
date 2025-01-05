@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework import routers
-from .views import TodoViewSet
+from todo.views import TodoViewSet
 
 # ここがポイント！
 # DefaultRouterは、RESTfulなAPIのエンドポイントを自動で生成してくれる便利なやつ。

@@ -6,7 +6,9 @@ repos:
         language_version: python3.11 # BlackはPythonのコードフォーマッターだよ。ReactでいうPrettierみたいなもん。この設定でPython3.11を使うって指定してる。
 
   - repo: https://github.com/pycqa/flake8
-    rev: 6.1.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         language_version: python3.11 # Flake8はコードの静的解析ツール。ESLintみたいな感じで、バグとかスタイル違反を見つけてくれる。これもPython3.11で動かすように指定。
+        additional_dependencies:
+          - flake8-absolute-import==1.0.0.2

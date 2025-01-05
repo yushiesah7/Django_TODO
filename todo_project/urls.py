@@ -9,6 +9,7 @@ Reactでいうと、ルーティングの設定ファイルみたいなもの。
 https://docs.djangoproject.com/en/5.1/topics/http/urls/
 
 """
+
 from django.contrib import admin
 from django.urls import path, include
 
